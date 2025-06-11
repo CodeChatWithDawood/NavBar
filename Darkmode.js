@@ -8,7 +8,7 @@ export default function Darkmode() {
         borderRadius:'4px',
         
     })
-const [btntext,setbtntext]=useState("Enable White Mode")
+const [btntext,setbtntext]=useState("Enable light Mode")
    const changeUtility=()=>{
         if (myStyle.color==='white'){
             setMyStyle({

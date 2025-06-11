@@ -4,19 +4,22 @@ import { useState } from "react";
 export default function Textform(props) {
       
     //  settext("text here")
+  const[text, settext] =useState("");
+
     const handleupclick =()=>{
-  console.log(text);
   let newtext=text.toUpperCase();
   settext(newtext)
+  props.showalerts("Success","converted to uppercase")
    }
+
    const handleupclicka =()=>{
   console.log(text);
   let newtext=text.toLowerCase();
   settext(newtext)
+   props.showalerts("Success","converted to lowercase")
    }
      
    const handleonchange=(event)=>{
-    console.log("text on change press");
     settext(event.target.value)
    }
 
@@ -28,7 +31,7 @@ export default function Textform(props) {
        settext("")
         
    }
-   const[text, settext] =useState("");
+   
    
   return (
     <>
